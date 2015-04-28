@@ -2,13 +2,20 @@
 
 ## Features
 
-* translates in both directions
+* translates in both directions (using sqlite databse with FTS4)
 * translate via keyword
-* translate from selected text in OS X via hotkey
+* translate from selected text in OS X via global hotkey
 * save favorite words (by clicking the translation in Alfred)
 * retrieve list of favorite words (using keyword)
 
 ## Getting Started
+
+As it is not allowed to distribute copies of dict.cc dictionary you need to do some steps manually to get your offline dictionary working with Alfred:
+
+1. download the [dict.cc - offline dictionary.alfredworkflow](https://github.com/danielpichel/dict.cc/blob/master/dict.cc%20-%20offline%20dictionary.alfredworkflow) and install via Alfred
+2. download a wordbook of your choice at [dict.cc download site](http://www1.dict.cc/translation_file_request.php?l=e) (always select the UTF-8 version)
+3. go to your workflow directory in Alfred and copy the downloaded dictionary file to the "db" directory (e.g. db/de_en.txt) 
+4. run *ruby scripts/creatdb.rb* from your terminal (while being in the Alfred workflow folder), this convertes the dictionary into a sqlite database
 
 ## Configuration
 
