@@ -26,5 +26,5 @@ As it is not allowed to distribute copies of dict.cc dictionary you need to do s
 
 Your favorite translations are stored tab separated in a file of your choice (-> see configuration). You can share it with other apps in order to learn your vocabulary. 
 
-I highly recommend using Flashcards http://flashcardsdeluxe.com/Flashcards/ for iOS for this purpose. It also supports Dropbox Sync. You can point your vocabulary file to a folder in your Dropbox and access it via Flashcards.
+I highly recommend using [Flashcards](http://flashcardsdeluxe.com/Flashcards/) for iOS for this purpose. It also supports Dropbox Sync. You can point your vocabulary file to a folder in your Dropbox and access it via Flashcards.
 
