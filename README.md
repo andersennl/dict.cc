@@ -8,6 +8,8 @@
 * save favorite words (by clicking the translation in Alfred)
 * retrieve list of favorite words (using keyword)
 
+![alt tag](http://res.cloudinary.com/danielpichel/image/upload/w_500/v1430257766/dictcc_alfred.png)
+
 ## Getting Started
 
 As it is not allowed to distribute copies of dict.cc dictionary you need to do some steps manually to get your offline dictionary working with Alfred:
