@@ -19,12 +19,10 @@ class Dictionary
   end
 
   def output
-
     title_id = 0
     subtitle_id = 1
 
     if @items.count > 0
-
       if @items.first[0].downcase.include? @input.downcase
         title_id = 1
         subtitle_id = 0
