@@ -4,7 +4,7 @@ Encoding::default_external = Encoding::UTF_8 if defined? Encoding
 
 require "sqlite3"
 require "uri"
-require_relative "helpers.rb"
+require_relative "path.rb"
 
 class Storage
   def initialize
