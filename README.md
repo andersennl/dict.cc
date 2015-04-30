@@ -23,6 +23,7 @@ As it is not allowed to distribute copies of dict.cc dictionary you need to do s
 
 * use config.yaml in this workflow directory
 * setup storage/file to a file of your choice (otherwise favoring is inactive), use full path + filename, e.g. /Users/username/vocab.tsv
+* use `homepath` to point to your home directory, e.g. `"homepath/Dropbox/dict.txt"`
 
 ## Tip
 

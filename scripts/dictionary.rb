@@ -4,14 +4,13 @@ Encoding::default_external = Encoding::UTF_8 if defined? Encoding
 
 require "sqlite3"
 require "uri"
-require "yaml"
+require_relative "path.rb"
 load "scripts/storage.rb"
 
 class Dictionary
   def initialize
-    @config = YAML.load(File.open("config.yml"))
-    @wb = @config["dictionary"]["wb"]
-    @limit = @config["dictionary"]["limit"]
+    @wb = Path::dic_wb
+    @limit = Path::limit
 
     @content = [] # output content
     @items = [] # wordpairs to display
@@ -20,12 +19,10 @@ class Dictionary
   end
 
   def output
-
     title_id = 0
     subtitle_id = 1
 
     if @items.count > 0
-
       if @items.first[0].downcase.include? @input.downcase
         title_id = 1
         subtitle_id = 0

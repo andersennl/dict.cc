@@ -4,12 +4,13 @@ Encoding::default_external = Encoding::UTF_8 if defined? Encoding
 
 require "sqlite3"
 require "uri"
-require "yaml"
+require_relative "path.rb"
 
 class Storage
   def initialize
-    @config = YAML.load(File.open("config.yml"))
-    @file = @config["storage"]["file"]
+    @file = Path::file
+    @wb = Path::dic_wb
+    @limit = Path::limit
 
     # format for words:
     # word_de1,word_de2,word_enx /t word_en1,word_en2,word_enx
