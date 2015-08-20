@@ -21,8 +21,8 @@ class Storage
 
   # read all words from file
   def initwords
-    return if not @file
-    return if not File.file?(@file)
+    return unless @file
+    return unless File.file?(@file)
     content = File.new(@file).read
     content.split("\n").each do |line|
       pair = line.split("\t")
@@ -45,7 +45,7 @@ class Storage
   # remove word pair
   def remove(word1, word2)
     pos = check(word1, word2)
-    return false if not pos
+    return false unless pos
 
     if @words_left[pos].count == 1 && @words_right[pos].count == 1
       # delete line if there's only this one word pair
@@ -87,7 +87,7 @@ class Storage
 
     # try to insert as a second translation | checking right side
     # not not insert on both side
-    if not insert
+    unless insert
       @words_right.each_with_index do |words_right, i|
         if words_right.index(word2)
           @words_left[i].push word1
@@ -98,7 +98,7 @@ class Storage
     end
 
     # if it was not inserted
-    if not insert
+    unless insert
       @words_left.push [word1]
       @words_right.push [word2]
     end

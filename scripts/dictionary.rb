@@ -90,13 +90,12 @@ class Dictionary
     chain.downcase.split(" ").each do |word|
       return true if word==@input.downcase
     end
-    return false
+    false
   end
 
   def rate_item_part(part)
-
     # seems stupid but this was the case for the verb "spielen"
-    return 1000 if not part.is_a? String
+    return 1000 unless part.is_a? String
 
     # exact match
     return 0 if part.downcase == @input.downcase
@@ -104,14 +103,13 @@ class Dictionary
     pos = part.downcase.index(@input.downcase)
 
     # no match (usually for one part in a row)
-    pos = 0 if not pos
+    pos = 0 unless pos
 
     # add penalty points if word is not exctly included
-    pos = 100 if not rate_item_part_exactinclude(part)
+    pos = 100 unless rate_item_part_exactinclude(part)
 
     # position + length
-    return pos + part.length
-
+    pos + part.length
   end
 
   def rate_item(item)
